@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>线索雷达 · 一键直达</title>
+<style>
+:root{--bg:#F5F7FA;--card:#FFF;--ink:#1F2937;--sub:#6B7280;--line:#E5E7EB;--blue:#185FA5;--blue-bg:#E6F1FB;--green:#0F6E56;--green-bg:#E1F5EE;--amber:#854F0B;--amber-bg:#FAEEDA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:14px 14px 30px}
+h1{font-size:17px;font-weight:500;color:var(--blue);margin-bottom:2px}
+p.desc{font-size:12px;color:var(--sub);margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px}
+.card h2{font-size:14px;font-weight:500;margin-bottom:8px}
+.row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:none}
+.row input[type=checkbox]{width:20px;height:20px;flex:none;accent-color:var(--green)}
+.row .txt{flex:1;font-size:13px}
+.row .txt small{display:block;color:var(--sub);font-size:11px}
+a.big{display:block;text-align:center;background:var(--blue);color:#fff;text-decoration:none;border-radius:10px;padding:11px;font-size:14px;font-weight:500}
+a.big.g{background:var(--green)}
+a.big.ghost{background:var(--blue-bg);color:var(--blue)}
+a.big:active{opacity:.75}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.chip{border:1px solid var(--blue);color:var(--blue);background:var(--blue-bg);border-radius:99px;padding:7px 13px;font-size:13px;cursor:pointer;user-select:none}
+.chip:active{opacity:.6}
+.chip.done{background:var(--green-bg);border-color:var(--green);color:var(--green)}
+.tip{font-size:11px;color:var(--sub);margin:6px 0 2px;line-height:1.7}
+.done-all{background:var(--green-bg);color:var(--green);border-radius:10px;padding:10px;font-size:13px;text-align:center;display:none}
+</style>
+</head>
+<body>
+<h1>线索雷达 · 一键直达</h1>
+<p class="desc">每周 5 分钟：点开入口 → 粘贴关键词 → 扫标题 → 打勾。打勾状态只存在你手机本地。</p>
+
+<div class="card">
+<h2>第 1 步 · 复制关键词（点一下就复制）</h2>
+<div class="chips" id="chips">
+<span class="chip" data-k="点胶机 中标">点胶机 中标</span>
+<span class="chip" data-k="贴片机 中标">贴片机 中标</span>
+<span class="chip" data-k="叠片机 中标">叠片机 中标</span>
+<span class="chip" data-k="激光切割机 中标">激光切割机 中标</span>
+<span class="chip" data-k="视觉检测设备 中标">视觉检测设备 中标</span>
+<span class="chip" data-k="自动化产线 中标">自动化产线 中标</span>
+</div>
+<p class="tip">到下面的站点搜索框粘贴即可。要看采购方是谁、中标方是谁，记下公司名。</p>
+</div>
+
+<div class="card">
+<h2>第 2 步 · 中标入口（实测可开）</h2>
+<div class="row"><input type="checkbox" data-id="c1"><div class="txt">中国政府采购网 · 公开招标公告<small>点胶/检测/产线类设备最常见来源</small></div><a class="big ghost" style="width:88px;padding:8px" href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/" target="_blank" rel="noopener">打开</a></div>
+<div class="row"><input type="checkbox" data-id="c2"><div class="txt">中国招标投标公共服务平台<small>全国项目汇总，站内搜索</small></div><a class="big ghost" style="width:88px;padding:8px" href="https://www.cebpubservice.com/" target="_blank" rel="noopener">打开</a></div>
+<div class="row"><input type="checkbox" data-id="c3"><div class="txt">全国公共资源交易平台<small>省市级公共资源交易，产线/技改项目多</small></div><a class="big ghost" style="width:88px;padding:8px" href="https://www.ggzy.gov.cn/" target="_blank" rel="noopener">打开</a></div>
+<div class="row"><input type="checkbox" data-id="c4"><div class="txt">剑鱼标讯<small>专业标讯搜索，命中率高；部分内容要注册</small></div><a class="big ghost" style="width:88px;padding:8px" href="https://www.jianyu360.com/" target="_blank" rel="noopener">打开</a></div>
+</div>
+
+<div class="card">
+<h2>第 3 步 · 招聘信号（在招人 = 在扩产）</h2>
+<a class="big" href="https://sou.zhaopin.com/?kw=%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%B7%A5%E7%A8%8B%E5%B8%88" target="_blank" rel="noopener">智联 · 运动控制工程师</a>
+<div style="height:8px"></div>
+<a class="big" href="https://sou.zhaopin.com/?kw=%E7%9B%B4%E7%BA%BF%E7%94%B5%E6%9C%BA" target="_blank" rel="noopener">智联 · 直线电机</a>
+<div style="height:8px"></div>
+<a class="big ghost" href="https://www.zhipin.com/web/geek/job?query=%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%B7%A5%E7%A8%8B%E5%B8%88" target="_blank" rel="noopener">备选 · BOSS 直聘</a>
+<div style="height:8px"></div>
+<a class="big ghost" href="https://we.51job.com/pc/search?keyword=%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%B7%A5%E7%A8%8B%E5%B8%88" target="_blank" rel="noopener">备选 · 前程无忧</a>
+<p class="tip">优先看智联（搜索直链实测可用）。BOSS / 前程可能要求登录。看到招「运控 / 直线电机」的公司 = 新机型立项信号，先找技术负责人。</p>
+</div>
+
+<div class="card">
+<h2>第 4 步 · 竞品官网（有改动会自动提醒）</h2>
+<div class="row"><input type="checkbox" data-id="e1"><div class="txt">雅科贝思 Akribis<small>linear motors 产品页</small></div><a class="big ghost" style="width:88px;padding:8px" href="https://www.akribis-sys.cn/linear-motors.html" target="_blank" rel="noopener">打开</a></div>
+<div class="row"><input type="checkbox" data-id="e2"><div class="txt">上银 HIWIN</div><a class="big ghost" style="width:88px;padding:8px" href="https://www.hiwin.com/" target="_blank" rel="noopener">打开</a></div>
+<div class="row"><input type="checkbox" data-id="e3"><div class="txt">PI（压电/直线）</div><a class="big ghost" style="width:88px;padding:8px" href="https://www.physikinstrumente.com/" target="_blank" rel="noopener">打开</a></div>
+<div class="row"><input type="checkbox" data-id="e4"><div class="txt">Aerotech</div><a class="big ghost" style="width:88px;padding:8px" href="https://www.aerotech.com/" target="_blank" rel="noopener">打开</a></div>
+<p class="tip">大族电机、盛世智能、汉诺精密、冠业传动：官网未确认，暂不放链接。你在 config/competitors.json 里补一次网址即开始监控。</p>
+</div>
+
+<div class="done-all" id="doneAll">本周扫完。记得把命中的公司记进跟进台账。</div>
+
+<script>
+(function(){
+  var KEY='radar-links-v1';
+  var st={};
+  try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){st={}}
+  function save(){localStorage.setItem(KEY,JSON.stringify(st))}
+  function refresh(){
+    var boxes=document.querySelectorAll('input[type=checkbox]'),n=0;
+    boxes.forEach(function(b){ if(st[b.dataset.id]){b.checked=true;n++} });
+    document.querySelectorAll('.chip').forEach(function(c){ c.classList.toggle('done', !!st['k:'+c.dataset.k]) });
+    var d=document.getElementById('doneAll');
+    d.style.display = (n>=8) ? 'block':'none';
+  }
+  document.querySelectorAll('input[type=checkbox]').forEach(function(b){
+    b.addEventListener('change',function(){ st[b.dataset.id]=b.checked; save(); refresh(); });
+  });
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.addEventListener('click',function(){
+      var t=c.dataset.k;
+      if(navigator.clipboard){navigator.clipboard.writeText(t)}
+      else{var i=document.createElement('input');i.value=t;document.body.appendChild(i);i.select();document.execCommand('copy');document.body.removeChild(i)}
+      st['k:'+t]=true; save(); refresh();
+      c.textContent='已复制 ✓'; setTimeout(function(){c.textContent=t},1200);
+    });
+  });
+  refresh();
+})();
+</script>
+</body>
+</html>
