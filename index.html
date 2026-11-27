@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>线马 · 直线电机作战速查</title>
+<style>
+:root{--bg:#F5F7FA;--card:#FFFFFF;--ink:#1F2937;--sub:#6B7280;--line:#E5E7EB;--blue:#185FA5;--blue-bg:#E6F1FB;--green:#0F6E56;--green-bg:#E1F5EE;--red:#A32D2D;--red-bg:#FCEBEB;--amber:#854F0B;--amber-bg:#FAEEDA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding-bottom:76px}
+header{background:var(--blue);color:#fff;padding:18px 16px 14px}
+header h1{font-size:17px;font-weight:500}
+header p{font-size:12px;opacity:.85;margin-top:2px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line);z-index:20}
+nav button{flex:1;padding:10px 4px 12px;border:none;background:none;font-size:12px;color:var(--sub);cursor:pointer}
+nav button.on{color:var(--blue);font-weight:500}
+nav button .dot{display:block;width:16px;height:3px;border-radius:2px;background:transparent;margin:2px auto 4px}
+nav button.on .dot{background:var(--blue)}
+.wrap{padding:14px}
+.sec{display:none}.sec.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+.card h2{font-size:14px;font-weight:500;margin-bottom:8px;color:var(--blue)}
+.card h3{font-size:13px;font-weight:500;margin:10px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:var(--blue-bg);color:var(--blue);font-weight:500;text-align:left;padding:7px 6px;white-space:nowrap}
+td{padding:7px 6px;border-bottom:1px solid var(--line);color:var(--ink)}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;margin:0 4px 4px 0}
+.tag.b{background:var(--blue-bg);color:var(--blue)}
+.tag.g{background:var(--green-bg);color:var(--green)}
+.tag.r{background:var(--red-bg);color:var(--red)}
+.tag.a{background:var(--amber-bg);color:var(--amber)}
+.script{background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:8px;padding:12px;font-size:13px;margin:8px 0}
+.script.g{background:var(--green-bg);border-left-color:var(--green)}
+.script.a{background:var(--amber-bg);border-left-color:var(--amber)}
+.script .who{font-size:11px;color:var(--sub);margin-bottom:4px}
+label{display:block;font-size:12px;color:var(--sub);margin:10px 0 4px}
+input{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:15px;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--blue)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+.result{margin-top:14px;border-radius:10px;padding:14px;background:var(--green-bg)}
+.result .big{font-size:26px;font-weight:500;color:var(--green)}
+.result .sub{font-size:12px;color:var(--green);margin-top:2px}
+.rowline{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.rowline b{font-weight:500}
+.bar{height:26px;border-radius:6px;background:var(--blue-bg);color:var(--blue);font-size:11px;display:flex;align-items:center;padding-left:8px;margin:5px 0;white-space:nowrap}
+.bar.g{background:var(--green-bg);color:var(--green)}
+.bar.a{background:var(--amber-bg);color:var(--amber)}
+.bar.r{background:var(--red-bg);color:var(--red)}
+.note{font-size:11px;color:var(--sub);margin-top:8px;line-height:1.7}
+ul{padding-left:18px;font-size:13px}
+li{margin:5px 0}
+.q{font-size:13px;font-weight:500;margin-top:10px}
+.ans{font-size:13px;color:var(--sub);margin-top:3px}
+</style>
+</head>
+<body>
+<header>
+<h1>线马 · 直线电机作战速查</h1>
+<p>产品 / 话术 / 成本测算 / 交期　·　仅含产品与方法，不含客户资料</p>
+<a href="links.html" style="display:inline-block;margin:6px 0 2px;padding:8px 14px;background:#2563eb;color:#fff;border-radius:10px;text-decoration:none;font-size:14px">📡 一键直达 · 线索雷达入口</a>
+</header>
+
+<div class="wrap">
+
+<!-- 参数 -->
+<div class="sec on" id="s1">
+<div class="card">
+<h2>DB 系列（中间磁铁 · 免吸力）</h2>
+<p class="note" style="margin:0 0 8px">官方参数。卖点：磁吸力在结构内抵消，对外无吸引力，导轨可降一档。</p>
+<table>
+<tr><th>型号</th><th>持续推力</th><th>峰值推力</th></tr>
+<tr><td>MIC98-40-S1</td><td>120 N</td><td>340 N</td></tr>
+<tr><td>MIC98-55-S1</td><td>200 N</td><td>530 N</td></tr>
+<tr><td>MIC98-75-S1</td><td>280 N</td><td>800 N</td></tr>
+<tr><td>MIC182-40-S1</td><td>230 N</td><td>680 N</td></tr>
+<tr><td>MIC182-55-S1</td><td>390 N</td><td>1060 N</td></tr>
+<tr><td>MIC182-75-S1</td><td>540 N</td><td>1600 N</td></tr>
+<tr><td>MIC266-40-S1</td><td>330 N</td><td>940 N</td></tr>
+<tr><td>MIC266-55-S2</td><td>550 N</td><td>1600 N</td></tr>
+<tr><td>MIC266-75-S1/S2</td><td>750 N</td><td>2200 N</td></tr>
+</table>
+</div>
+<div class="card">
+<h2>DF 系列（双边磁铁 · 高刚性）</h2>
+<table>
+<tr><th>型号</th><th>持续推力</th><th>峰值推力</th></tr>
+<tr><td>MIC98-40-S1</td><td>110 N</td><td>340 N</td></tr>
+<tr><td>MIC98-55-S1</td><td>185 N</td><td>530 N</td></tr>
+<tr><td>MIC182-40-S1</td><td>210 N</td><td>680 N</td></tr>
+<tr><td>MIC266-75-S1/S2</td><td>700 N</td><td>2200 N</td></tr>
+</table>
+</div>
+<div class="card">
+<h2>另外两条有优势的产品线</h2>
+<span class="tag b">EL / EH 经济型模组</span><span class="tag g">4 m+ 行程 · 4 m/s+ · 同轴多动子 · 价格能打</span>
+<br><span class="tag b">PIC 喷绘系列</span><span class="tag g">宽幅打印 / 卷材 · 宽度按机型配 · 供货不断料</span>
+<h3>一句话区分用法</h3>
+<ul>
+<li><b>工程师</b>（谈加速度、精度、导轨寿命）→ 出 <b>DB / DF</b></li>
+<li><b>老板 / 采购</b>（谈单价、账期、交期）→ 出 <b>EL / EH</b></li>
+<li><b>喷绘打印设备厂</b>（谈机型配套、断料）→ 出 <b>PIC</b></li>
+</ul>
+<p class="note">GPT / UM / ILC / DXM / MA、Z 刀片电机、无槽平台：不主动推。</p>
+</div>
+</div>
+
+<!-- 话术 -->
+<div class="sec" id="s2">
+<div class="card">
+<h2>30 秒开场（四段）</h2>
+<div class="script"><div class="who">① 报身份，一句话</div>「我是线马直线电机的，我们常规 10 天交期，行业普遍要 25-60 天。」</div>
+<div class="script"><div class="who">② 说他的痛点，不说我的产品</div>「你们这种设备的横梁轴，用单边铁芯电机的话，导轨要多扛约 10 倍推力的磁吸力。」</div>
+<div class="script"><div class="who">③ 给量化结果</div>「我们 DB 把吸力在结构里抵消了，导轨能降一档，三年下来省的比电机差价多。」</div>
+<div class="script"><div class="who">④ 只要一个 20 分钟</div>「行程和负载给我，我当场算一遍给你看。不用你买，先算。」</div>
+</div>
+<div class="card">
+<h2>三套逐字稿（看对面是谁）</h2>
+<div class="script"><div class="who">DB / DF · 对工程师</div>「你这根横梁轴如果用单边铁芯电机，导轨要多扛 10 倍推力的吸力，导轨得升一档、滑块两年一换。我们 DB 把吸力在结构里抵消了，导轨能降一档。行程和负载给我，我算一遍三年总成本给你看。」</div>
+<div class="script g"><div class="who">EL / EH · 对老板 / 采购</div>「同样行程和负载，我用 EL 经济型给你配，价格能对齐你现在用的方案，常规 10 天交。先拿一台测，数据说话。」</div>
+<div class="script a"><div class="who">PIC · 对喷绘设备厂</div>「PIC 就是给喷绘机型做的，宽度按你们机器配，供货稳定不断料——你们这行最怕的就是断料停产。」</div>
+<p class="note">三套话术一个字都不要混着讲。</p>
+</div>
+<div class="card">
+<h2>8 种拒绝的应对</h2>
+<div class="q">「你们比别人贵 20%」</div>
+<div class="ans">先问三件事：含驱动器吗？同规格吗？质保几年？然后说：「按你这个节拍，我们的方案是 X 台他们是 Y 台，加上调试和两年维护，总成本差多少？预算卡死的话我给你配降规版本，性能刚好够用。」——降配置，不降价。</div>
+<div class="q">「我们丝杠用得好好的」</div>
+<div class="ans">「那说明你们现在的节拍没问题。等哪天要提到 1G 以上加速度、或者洁净车间不让用润滑脂的时候，你叫我，我先把数算好放这。」</div>
+<div class="q">「研发没提这个需求」</div>
+<div class="ans">「正常，需求是被指标逼出来的。你们最近有没有要提 UPH 或者精度的机型？那个节点你叫我。」</div>
+<div class="q">「你先发资料我看看」</div>
+<div class="ans">「资料我发你。但资料里没算你们的行程和负载，发完就沉了。你给我两个参数，我发一份按你们机型算的数，10 分钟。」</div>
+<div class="q">「没听过你们公司」</div>
+<div class="ans">「我们是深科达（上市公司 688328）旗下，富士康、海目星、捷佳伟创都是我们的客户。你不知道正常，因为这类部件是进 BOM 的，不打广告。」</div>
+<div class="q">「交期能保证吗」</div>
+<div class="ans">「常规型号 10 天，非标 20-30 天，写进合同。你们现在等进口要多久？3 个月起吧。」</div>
+<div class="q">「我要问采购 / 老板」</div>
+<div class="ans">「应该的。但选型这事采购定不了，技术方案定了采购才好谈价。你让我先跟你把参数对完，我给你一份能让老板直接签字的对比表。」</div>
+<div class="q">「今年没预算」</div>
+<div class="ans">「那正好，我把三年总成本算给你，你做明年预算的时候这份数据能用上。到时候记得叫我。」</div>
+</div>
+</div>
+
+<!-- TCO -->
+<div class="sec" id="s3">
+<div class="card">
+<h2>三年总成本测算（当场算给客户看）</h2>
+<p class="note" style="margin:0 0 4px">原理：单边铁芯电机永磁定子的法向磁吸力约为持续推力的 10 倍，且与是否通电无关。DB / DF 把它抵消，导轨可降一档。</p>
+<div class="grid2">
+<div><label>电机持续推力（N）</label><input id="i_thrust" type="number" value="200" inputmode="decimal"></div>
+<div><label>导轨根数</label><input id="i_rails" type="number" value="2" inputmode="numeric"></div>
+<div><label>导轨原单价（元）</label><input id="i_rail1" type="number" value="1200" inputmode="decimal"></div>
+<div><label>需升档后单价（元）</label><input id="i_rail2" type="number" value="1680" inputmode="decimal"></div>
+<div><label>滑块数量</label><input id="i_blocks" type="number" value="2" inputmode="numeric"></div>
+<div><label>滑块单价（元）</label><input id="i_block1" type="number" value="400" inputmode="decimal"></div>
+<div><label>单边方案滑块年更换（次）</label><input id="i_chg" type="number" value="0.5" step="0.1" inputmode="decimal"></div>
+<div><label>停机损失（元/小时）</label><input id="i_loss" type="number" value="5000" inputmode="decimal"></div>
+<div><label>每年少停机（小时）</label><input id="i_hours" type="number" value="4" inputmode="decimal"></div>
+<div><label>电机差价（元）</label><input id="i_diff" type="number" value="3000" inputmode="decimal"></div>
+</div>
+<div class="result" id="tco">
+<div class="big" id="o_save">—</div>
+<div class="sub" id="o_sub">填入参数后自动计算</div>
+<div style="margin-top:10px" id="o_detail"></div>
+</div>
+<p class="note">所有数字都可按客户实际改。给客户看之前，把「电机差价」换成你们的真实差价。</p>
+</div>
+</div>
+
+<!-- 交期 -->
+<div class="sec" id="s4">
+<div class="card">
+<h2>交期对比（你的第一张牌）</h2>
+<div class="bar g" style="width:12%">线马常规 10 天</div>
+<div class="bar g" style="width:32%">线马非标 20-30 天</div>
+<div class="bar a" style="width:62%">国产定制 25-60 天</div>
+<div class="bar r" style="width:100%">进口 PI / Aerotech 等 3-6 个月</div>
+<p class="note">行业公开交期。谈交期时只说一句：「你的验收节点是什么时候？我倒推给你看够不够。」</p>
+</div>
+<div class="card">
+<h2>抗降价的三条纪律</h2>
+<ul>
+<li><b>不比单价，比同工况总成本</b>——用 TCO 页当场算。</li>
+<li><b>不降价，降配置</b>——客户预算卡死时推 EL / EH，价格体系不动。</li>
+<li><b>筛掉价格敏感客户</b>——第一通电话只问价格、招标最低价中标的，直接降级，把时间留给愿意为性能付钱的。</li>
+</ul>
+</div>
+<div class="card">
+<h2>五个自检（判断是真没优势还是没讲清）</h2>
+<ul>
+<li>同工况下推力密度、加速度、精度是否领先？</li>
+<li>交期能否比对手短 10 天以上？（你能，10 天）</li>
+<li>有对手不做的定制能力吗？</li>
+<li>技术支持能否到场？（苏州 2 名技术可调动）</li>
+<li>有独家案例或认证吗？</li>
+</ul>
+<p class="note">三个「是」以上 = 有牌可打，问题在话术和筛选。</p>
+</div>
+</div>
+
+</div>
+
+<nav>
+<button class="on" onclick="sw(1,this)"><span class="dot"></span>参数</button>
+<button onclick="sw(2,this)"><span class="dot"></span>话术</button>
+<button onclick="sw(3,this)"><span class="dot"></span>成本测算</button>
+<button onclick="sw(4,this)"><span class="dot"></span>交期</button>
+</nav>
+
+<script>
+function sw(n,el){
+  document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('on')});
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('nav button').forEach(function(b){b.classList.remove('on')});
+  el.classList.add('on');
+  window.scrollTo(0,0);
+}
+function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?0:v}
+function calc(){
+  var F=num('i_thrust'),rails=num('i_rails'),r1=num('i_rail1'),r2=num('i_rail2');
+  var blocks=num('i_blocks'),b1=num('i_block1'),chg=num('i_chg');
+  var loss=num('i_loss'),hrs=num('i_hours'),diff=num('i_diff');
+  var suction=F*10;
+  var railSave=(r2-r1)*rails;
+  var blockSave=b1*blocks*chg*3;
+  var downSave=loss*hrs*3;
+  var total=railSave+blockSave+downSave;
+  var net=total-diff;
+  var months=total>0?(diff/(total/36)):0;
+  document.getElementById('o_save').textContent='三年省 '+Math.round(total).toLocaleString()+' 元';
+  document.getElementById('o_sub').textContent=net>=0
+    ? ('净收益 '+Math.round(net).toLocaleString()+' 元 · 约 '+months.toFixed(1)+' 个月补回电机差价')
+    : ('按当前参数不足以补回差价，请复核导轨与停机数据');
+  document.getElementById('o_detail').innerHTML=
+    '<div class="rowline"><span>单边铁芯磁吸力（约 10 倍推力）</span><b>'+Math.round(suction).toLocaleString()+' N</b></div>'+
+    '<div class="rowline"><span>导轨降一档省</span><b>'+Math.round(railSave).toLocaleString()+' 元</b></div>'+
+    '<div class="rowline"><span>滑块少换三年省</span><b>'+Math.round(blockSave).toLocaleString()+' 元</b></div>'+
+    '<div class="rowline"><span>减少停机三年省</span><b>'+Math.round(downSave).toLocaleString()+' 元</b></div>'+
+    '<div class="rowline"><span>电机差价</span><b>−'+Math.round(diff).toLocaleString()+' 元</b></div>'+
+    '<div class="rowline" style="border:none"><span>净收益</span><b>'+Math.round(net).toLocaleString()+' 元</b></div>';
+}
+document.querySelectorAll('#s3 input').forEach(function(i){i.addEventListener('input',calc)});
+calc();
+</script>
+</body>
+</html>
